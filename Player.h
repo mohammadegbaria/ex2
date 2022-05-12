@@ -7,7 +7,7 @@ using namespace std;
 
 class Player
 { 
- string namePlayer;
+ const char* namePlayer;
  int levelPlayer;
  int forceplayer;
  unsigned int maxHealth;
@@ -15,7 +15,7 @@ class Player
  unsigned int coinsPlayer;
 public:
 
-Player(string name,int Maxhealth=100 ,int force=5);
+Player(const char* name,int Maxhealth=100 ,int force=5);
 Player()=default;
 ~Player()=default;
 Player(Player& Player)=default;

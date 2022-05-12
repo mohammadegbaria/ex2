@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include "Player.h"
-#define FIRSTLEVEL 0
+#include "utilities.h"
+#define FIRSTLEVEL 1
 #define STARTCOINS 0
 #define DEAD 0
 
-Player::Player(string name,int maxHp,int force)
+Player::Player(const char* name,int maxHp,int force)
 {
     namePlayer =name;
     levelPlayer=FIRSTLEVEL;
@@ -16,13 +17,7 @@ Player::Player(string name,int maxHp,int force)
 }
 void Player::printInfo()
 {   
-    std::cout << "Player Details: " <<std::endl;
-    std::cout << "Name: " << namePlayer<<std::endl;
-    std::cout << "Level: " << levelPlayer<<std::endl;
-    std::cout << "Force: " << forceplayer<<std::endl;
-    std::cout << "HP " << hpPlayer<<std::endl;
-    std::cout << "Coins: " << hpPlayer<<std::endl;
-
+    printPlayerInfo(namePlayer, levelPlayer, forceplayer, hpPlayer, coinsPlayer);
 }
 void Player::levelUp()
 {
