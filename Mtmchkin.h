@@ -46,6 +46,9 @@ public:
      *          True if the game ended
      *          False otherwise
      */
+    Mtmchkin(Mtmchkin& obj);
+    Mtmchkin& operator=(const Mtmchkin& obj);
+    ~Mtmchkin();
     bool isOver() const;
 
 
@@ -61,6 +64,10 @@ public:
 
 private:
     //TODO: complete the Mtmchkin class.
+    Player gamer;
+    int numberOfCards,index;
+    GameStatus game;
+    Card* arrayOfCards;
 
 };
 
